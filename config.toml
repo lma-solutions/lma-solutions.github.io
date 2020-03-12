@@ -1,4 +1,4 @@
-baseURL = "https://lma-solutions.github.io"
+baseURL = "https://lma.solutions"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "LMA Solutions"
@@ -65,7 +65,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[params.social]]
     name = "github"
-    url = "https://github.com/"
+    url = "https://github.com/lma-solutions"
 
 [menu]
 
