@@ -1,0 +1,25 @@
+disableHugoGeneratorInject: true
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+  - sitemap
+
+languageCode: en-us
+baseURL: https://lma.solutons
+
+markup:
+
+  # TODO: use Goldmark once it has hrefTargetBlank feature.
+  defaultMarkdownHandler: blackFriday
+
+  blackFriday:
+    hrefTargetBlank: true
+    noreferrerLinks: true
+
+params:
+  description: LMA solutions.
+  author: Ugnius Malūkas
+  name: Ugnius Malūkas
+  images:
+    - icon.png
