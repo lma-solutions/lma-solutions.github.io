@@ -21,17 +21,17 @@ jobs:
         git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
     - name: Hugo setup
-      uses: peaceiris/actions-hugo@v2.3.2
+      uses: peaceiris/actions-hugo@v2.4.13
       with:
-        hugo-version: '0.62.2'
+        hugo-version: '0.79.1'
 
     - name: Hugo build
       run: hugo --verbose --minify
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v2.9.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./public
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: master
+        publish_dir: ./public
 
